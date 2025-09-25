@@ -1,1 +1,6 @@
-# React_learning_jorney
+<<<<<<< HEAD
+Your local changes
+=======
+Remote changes
+
+> > > > > > > commit-hash
