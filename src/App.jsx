@@ -15,11 +15,11 @@ function App() {
   return(
     <div className="class w-full h-screen bg-black flex gap-10 justify-center items-center">
       {data.map((value,index)=>
-          <div className="parentcard w-60 bg-amber-200 rounded-2xl overflow-hidden p-0 ">
-            <div className="img w-full h-full bg-blue-400">
-              <img src="https://images.unsplash.com/photo-1497206365907-f5e630693df0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1160" alt="" />
+          <div className="parentcard w-60 bg-amber-200 rounded-2xl overflow-hidden p-0 hover:bg-amber-500">
+            <div className="img w-fit h-full bg-blue-400">
+              <img src={value.url} alt="" />
             </div>
-            <div className="textcontent w-full px-3 py-4">
+            <div className="textcontent w-fit px-3 py-4">
               <h2>Lorem ipsum dolor sit.</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, incidunt!</p>
             </div>
