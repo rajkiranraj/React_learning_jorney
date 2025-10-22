@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body style="background: black; color: white; padding: 20px;">
+    <h1>🛒 Shopping Cart</h1>
+    
+    <h3>Add Item Prices:</h3>
+    <input id="item1" type="number" placeholder="Item 1 price" value="29.99">
+    <input id="item2" type="number" placeholder="Item 2 price" value="15.50">
+    <input id="item3" type="number" placeholder="Item 3 price" value="42.00">
+    <br><br>
+    <button onclick="calculate()">Calculate Total</button>
+    
+    <div id="output"></div>
+
+    <script>
+        // Fixed values using const
+        const TAX_RATE = 0.08;  // 8% tax
+        const SHIPPING_FEE = 5.99;
+        
+        function calculate() {
+            // Get input values
+            var item1Price = parseFloat(document.querySelector('#item1').value) || 0;
+            var item2Price = parseFloat(document.querySelector('#item2').value) || 0;
+            var item3Price = parseFloat(document.querySelector('#item3').value) || 0;
+            
+            // Calculate using var
+            var subtotal = item1Price + item2Price + item3Price;
+            var taxAmount = subtotal * TAX_RATE;
+            var total = subtotal + taxAmount + SHIPPING_FEE;
+            
+            // Create message
+            var message = `
+                <h3>Cart Items:</h3>
+                <p>Item 1: $${item1Price.toFixed(2)}</p>
+                <p>Item 2: $${item2Price.toFixed(2)}</p>
+                <p>Item 3: $${item3Price.toFixed(2)}</p>
+                <hr>
+                <p>Subtotal: $${subtotal.toFixed(2)}</p>
+                <p>Tax (8%): $${taxAmount.toFixed(2)}</p>
+                <p>Shipping: $${SHIPPING_FEE.toFixed(2)}</p>
+                <h2>Total: $${total.toFixed(2)}</h2>
+            `;
+            
+            // Display on screen
+            document.querySelector('#output').innerHTML = message;
+        }
+        
+        // Calculate on page load
+        calculate();
+    </script>
+</body>
+</html>

@@ -1,19 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-}
-h1{
-  color: aqua;
-}
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.card {
-  padding: 2em;
+#h1{
+height: 100dvh;
+width: 100dvw;
+display: flex;
+justify-content: center;
+align-items: center;
 }
